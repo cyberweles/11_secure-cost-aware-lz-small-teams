@@ -1,0 +1,42 @@
+11_secure-cost-aware-lz-small-teams
+├── 00_docs
+│   ├── architecture.md
+│   ├── decisions.md
+│   └── threat-model.md
+├── 01_iac
+│   ├── bicep
+│   │   ├── main.bicep
+│   │   ├── modules
+│   │   │   ├── _index.md
+│   │   │   ├── actionGroupEmail.bicep
+│   │   │   ├── budgetMonthly.bicep
+│   │   │   ├── law.bicep
+│   │   │   ├── uami.bicep
+│   │   │   └── vnetNsg.bicep
+│   │   └── policies
+│   │       ├── _policies.md
+│   │       ├── assign-require-tag-value.bicep
+│   │       ├── require-tag-value.bicep
+│   │       ├── require-tag-value.rule.json
+│   │       └── require-tags.bicep
+│   └── params
+│       ├── dev
+│       │   └── main.bicepparam
+│       └── prod
+│           └── main.bicepparam
+├── 02_ops
+│   ├── notes
+│   └── scripts
+│       ├── deploy.sh
+│       ├── destroy.sh
+│       ├── setenv.sh
+│       └── verify.sh
+├── 03_ci
+│   └── validate.yml
+├── 04_examples
+│   ├── 01_rg_missing_tags.sh
+│   ├── 02_rg_wrong_costcenter.sh
+│   ├── 03_rg_correct_tags.sh
+│   └── README.md
+├── README.md
+└── project-structure.txt
