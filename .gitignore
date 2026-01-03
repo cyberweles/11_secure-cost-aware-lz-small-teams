@@ -15,11 +15,11 @@ Thumbs.db
 # Azure / Bicep build artifacts
 # -----------------------------
 
-# Ignore generated ARM templates / build artifacts
+# Ignore generated ARM templates (from bicep build)
 01_iac/bicep/*.json
 **/*.bicep.build.json
 
-# But keep policy rule JSON files tracked
+# Keep policy rule JSON files tracked (required by CI)
 !01_iac/bicep/policies/*.rule.json
 
 # -----------------------------
@@ -32,5 +32,9 @@ Thumbs.db
 # -----------------------------
 # Local state / outputs
 # -----------------------------
-dev/
+
+# Ignore ONLY root-level dev outputs (do NOT ignore params/dev)
+#/dev/ ignores just ./dev at repo root
+/dev/
+
 .out/
