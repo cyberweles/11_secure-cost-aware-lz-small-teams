@@ -14,8 +14,13 @@ Thumbs.db
 # -----------------------------
 # Azure / Bicep build artifacts
 # -----------------------------
-**/*.json
+
+# Ignore generated ARM templates / build artifacts
+01_iac/bicep/*.json
 **/*.bicep.build.json
+
+# But keep policy rule JSON files tracked
+!01_iac/bicep/policies/*.rule.json
 
 # -----------------------------
 # Bash / temp files
