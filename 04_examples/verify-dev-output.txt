@@ -1,0 +1,29 @@
+*$ bash ./02_ops/scripts/verify.sh
+==> Verifying environment: dev
+RG core: cwsbx-dev-weu-rg-core
+
+[OK] Azure CLI ready + logged in
+[OK] Resource group exists: cwsbx-dev-weu-rg-core
+[OK] RG location OK: westeurope
+[OK] Required tags exist (owner, costCenter, env)
+[OK] Tag values OK (owner='cyberweles', costCenter='sandbox', env='dev')
+[OK] LAW exists: cwsbx-dev-weu-law-01
+[OK] LAW location OK: westeurope
+[OK] LAW retention OK: 30 days
+[OK] Subscription diagnostic setting exists: cwsbx-dev-weu-diag-activitylog-01
+[OK] ActivityLog diag points to correct LAW
+[OK] Subscription budget exists: cwsbx-dev-weu-budget-01
+[OK] Budget amount OK: 25.0 EUR
+[OK] Budget notifications OK (80%, 100%)
+[OK] Policy assignment exists: cwsbx-dev-weu-pa-require-owner
+[OK] Policy assignment exists: cwsbx-dev-weu-pa-require-costcenter
+[OK] Policy assignment exists: cwsbx-dev-weu-pa-require-env
+[OK] VNet exists: cwsbx-dev-weu-vnet-01
+[OK] NSG exists: cwsbx-dev-weu-nsg-default-01
+[OK] Subnet OK + NSG associated: snet-shared
+[OK] Subnet OK + NSG associated: snet-private
+[OK] UAMI exists: cwsbx-dev-weu-uami-ops-01
+[OK] RBAC OK: Reader on subscription
+[OK] RBAC OK: Monitoring Reader on subscription
+
+[OK] VERIFY PASSED
