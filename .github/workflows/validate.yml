@@ -25,5 +25,5 @@ jobs:
       - name: Build params (dev)
         run: bicep build-params 01_iac/params/dev/main.bicepparam --outfile /tmp/dev.params.json
 
-      - name: Build params (prod)
-        run: bicep build-params 01_iac/params/prod/main.bicepparam --outfile /tmp/prod.params.json
+      #- name: Build params (prod)
+      #  run: bicep build-params 01_iac/params/prod/main.bicepparam --outfile /tmp/prod.params.json
